@@ -1,0 +1,89 @@
+/* Base Styles */
+.trendingNowSection {
+  margin-left: 8%;
+  margin-top: 4%;
+}
+
+.trendingBlocksContainer {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+.trendingBlock {
+  text-align: center;
+}
+
+.trendingBlock img {
+  width: 100%;
+  height: auto;
+}
+
+.sliderControls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+}
+
+.sliderControls button {
+  padding: 1px;
+  background-color: #007bff;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+}
+
+.sliderControls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.block {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.coverImage {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media Queries */
+
+/* Small Devices */
+@media (max-width: 600px) {
+  .trendingNowSection {
+    margin-left: 0;
+    margin-top: 2%;
+  }
+
+  .trendingBlocksContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .trendingNowSection {
+    margin-left: 5%;
+    margin-top: 3%;
+  }
+
+  .trendingBlocksContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1025px) {
+  .trendingNowSection {
+    margin-left: 8%;
+  }
+
+  .trendingBlocksContainer {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
